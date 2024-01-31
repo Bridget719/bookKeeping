@@ -1,21 +1,25 @@
 .poster {  
     height: 70vh; /* 70% of the screen height */  
     background-color: #ffffff;  
-    border-radius: 10px;  
+    background-image: url("https://ask-fd.zol-img.com.cn/g5/M00/05/06/ChMkJ1o3F_SIG_U2AAFtPfqKnLYAAjQVwMc144AAW1V757.jpg") ;
+    background-size: 141% 100%;
+    border-radius: 10px; 
+    opacity: 0.9; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
     display: flex;  
     align-items: center;  
+    flex-wrap: wrap;
     justify-content: center;  
   }  
     
   .title {  
-    font-size: 24px;  
+    font-size: 48px;  
     font-weight: bold;  
-    color: #333333;  
+    color: white;  
   }  
     
   .description {  
-    font-size: 16px;  
-    color: #666666;  
+    font-size: 32px;  
+    color: white;  
   }
   

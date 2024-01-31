@@ -63,6 +63,9 @@ class LoginRegisterPage extends React.Component<LoginRegisterProps, LoginRegiste
               id: res.signature
               // 更新其他状态...   
             });
+            Taro.redirectTo({
+              url: '/pages/home/index'
+            });
           },
           fail: (err) => {
             console.log('err', err); // 登录失败时打印错误信息  
@@ -88,12 +91,12 @@ class LoginRegisterPage extends React.Component<LoginRegisterProps, LoginRegiste
         <View style={{ textAlign: 'center' }}>
 
           {/* <Text>欢迎来到雯雯记账本，致力于减少我们不必要的日常花销</Text> */}
-          <Radio value='同意' checked={this.state.agreeToGetWeChatInfo} onClick={(e) => {
+          <Radio style={{ margin: '24px 0' }} value='同意' checked={this.state.agreeToGetWeChatInfo} onClick={(e) => {
             if (this.state.agreeToGetWeChatInfo !== true) this.setState({ agreeToGetWeChatInfo: true });
           }}>{ }我同意授权微信个人信息</Radio>
-          <Button onClick={this.handleSubmitRegister}>提交</Button>
+          <Button style={{ width: '80%', borderRadius: '10px' }} onClick={this.handleSubmitRegister}>提交</Button>
           {!this.state.agreeToGetWeChatInfo && this.state.firstSubmit ?
-            <Text style={{ color: 'red' }}>您还未同意授权信息，这样可以方便您下一次进入查看历史数据'</Text> : ''}
+            <Text style={{ color: 'red' }}>您还未同意授权信息，这样可以方便您下一次进入查看历史数据</Text> : ''}
         </View>
       </View>
     );
